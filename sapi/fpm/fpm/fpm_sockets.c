@@ -476,6 +476,8 @@ int fpm_socket_get_listening_queue(int sock, unsigned *cur_lq, unsigned *max_lq)
 
 int fpm_socket_unix_test_connect(struct sockaddr_un *sock, size_t socklen) /* {{{ */
 {
+	return -1;
+
 	int fd;
 
 	if (!sock || sock->sun_family != AF_UNIX) {
